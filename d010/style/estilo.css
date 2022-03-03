@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+/*
+#C5EBD6
+#83E1AD
+#3DDC84 - PRINCIPAL
+#2FA866
+#063D1E
+#063D1E
+
+Ao inves de criarmos desse jeito, melhor criarmos variais de cores, como 
+no modelo abaixo...
+*/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fontes/Montserrat/Montserrat-Bold.ttf') format('truetype'); 
+}
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype'); 
+}
+
+:root {
+
+    /*Cores*/
+    --cor1:#C5EBD6;
+    --cor2:#83E1AD;
+    --cor3:#3DDC84;
+    --cor4:#1A5C37;
+    --cor5:#063D1E;
+    --cor-nova: #f0ecb5;
+    --cor-branca: white;
+    
+    /*Fontes*/
+    --font-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --font-destaque: 'Montserrat';
+    --font-android:'Android';
+}
+
+* { /*Configuração global. Ou seja, toda a configuração aqui dentro, vale pra todos os meus elementos.*/
+    margin: 0px;
+    padding: 0px;
+}
+/*Corpo do Documento HTML*/
+
+body {
+    background-color: var(--cor-nova);
+    font-family: var(--font-padrao);
+}
+
+/*Cabeçalho do Documento HTML*/
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: var(--cor-branca);
+    font-family: var(--font-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.425);
+}
+
+header > p {
+    color: var(--cor-branca);
+    font-family: var(--font-padrao);
+    font-size: 1.2em;
+    margin: auto;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.425);
+}
+
+/*Menu de Navegação*/
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.366);
+}
+
+nav > a {
+    color: var(--cor-branca);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+    border-radius: 5px;
+    /*O tempo que vai durar a passar de um ao outro quando eu passar o mouse no elemento*/
+    transition-duration: 0.5s;
+}
+
+/*Corpo Principal (main) do Documento HTML*/
+
+main {
+    padding: 20px;
+    background-color: var(--cor-branca);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.349);
+
+    /*Quando tornamos a margem automatica, faz com que todo o conteudo pricnipal do nosso site fique centralizado independente da tela.*/
+    margin: auto;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /*Vai adaptar o meu conteúdo a tela (Responsividade de Conteúdo).*/
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+main p {
+    /*Estilização dos paragrafos dentro do conteudo principal*/
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+main strong {
+    /*Estilização de todas as PALAVRAS EM NEGRITO dentro do conteudo principal*/
+    color: var(--cor5);
+    font-weight: bold;
+}
+
+main a {
+    /*Estilização de LINKS dentro do conteudo principal*/
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 7px;
+    text-decoration: none;
+    font-weight: bold;  
+    border-radius: 4px;
+}
+
+a.externo::after {
+    content: '\1F517';
+}
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+main h1 {
+    /*Estilização de todos os TITULOS dentro do meu conteudo principal*/
+    color: var(--cor5);
+    font-family: var(--font-android);
+}
+
+main img {
+    /*Independente do conteúdo as minhas imagens vão se adaptar a tela (Responsividade para Imagens) reduzindo sempre.*/
+    width: 100%;
+}
+main h2 {
+    /*Estilização de todos os SUB-TITULOS dentro do meu conteudo principal*/
+    font-family: var(--font-android);
+    color: var(--cor5);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+main img.pequena {
+    /*Estilização para a imagem do homem segurando o bugdroid. max-width: 350px (a imagem por ter 400px de largura, só poderá aumentar até ao tamanho máximo que lhe sugerimos), margin: auto (Coloca a imagem centralizada, mas como uma imagem por pagrão não é um bloco acrescentamos o display: block);*/
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+aside {
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.308);
+}
+
+aside > h3 {
+    background-color: var(--cor5);
+    color: var(--cor-branca);
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /*Colocamos o sinal de check nas listas*/
+    list-style-position: inside;/*coloca as bolinhas da minha lista desordenada para dentro do meu aside*/
+    columns: 2; /*Divide a minha lista em duas colunas, sem se importar com as medidas*/
+}
+
+div.video {
+    background-color: var(--cor4);
+    padding: 20px;
+    margin: center;
+    margin: 0px -20px 30px -20px;
+}
+/*Rodapé do meu documento HTML*/
+footer {
+    background-color: var(--cor5);
+    color: var(--cor-branca);
+    text-align: center;
+    font-size: 0.9em;
+    padding: 5px;
+}
+
+footer > p > a {
+    color: var(--cor-branca);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer > p > a:hover {
+    color: var(--cor2);
+    text-decoration: underline;
+} 

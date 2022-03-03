@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+
+        /*
+            NOTAS DO CAPITULO 15
+                Seletores Personalizados
+
+            #  === id
+            .  === class
+            :  === pseudo-class
+            :: === pseudo element
+            >  === children
+        
+        */
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a { /*Aqui nós mudamos as propriedades gerais do link*/
+            color: black;
+            text-decoration: none;
+            font-weight: lighter;
+        }
+        a:visited {/*Nessa linha indica que quando o link já foi visitado (a:visited), a cor 
+            muda (color: burlywood)*/
+            color: burlywood;
+        }
+        a:hover { /*Aqui nós mudamos a decoração do texto quando passamos o mouse 
+            (text-decorection: underline), ele fica sublinhado e a cor muda para preto (color: black)*/
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+
+        a::after { /*Aqui nos temos um PSEUDO-ELEMENTO onde nós dizemos que depois de 
+            cada elemento a (a::after) aparecerá a palavra link (content: link) e a decoração
+            do texto será ausente (text-decoration: none) e o peso da fonte será normal
+            (font-weight: normal) a cor será preta (color: black)*/
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="">Repositório GitHub</a></li>
+        <li><a href="">Canal do Youtube</a></li>
+        <li><a href="">Site</a></li>
+    </ul>
+</body>
+</html>

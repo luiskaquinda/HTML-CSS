@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou 
+        simplesmente aumente e diminua o tamanho do navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudios</h1>
+    <p>Vamos aprender a reproduzir audios em HTML5.</p>
+    <!--<audio src="midia/projeto-sola.mp3" controls autoplay></audio> // Modo mais facil 
+        de colocar audio em HTML5-->
+
+    <audio preload="auto" autoplay controls loop>
+        <source src="midia/majesty-smith.mp3" type="audio/mpeg">
+        <source src="midia/majesty-smith.ogg" type="audio/ogg">
+        <source src="midia/majesty-smith.wav" type="audio/wav">
+        <p>Infelizmente o seu navegador não consegue reproduzir o formato de audio existente
+            <a href="midia/majesty-smith.mp3">Clique aqui para baixar o arquivo em mp3.</a>
+        </p>
+    </audio>
+
+</body>
+</html>

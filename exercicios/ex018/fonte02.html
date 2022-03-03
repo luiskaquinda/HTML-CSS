@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Nome_da_Fonte';
+            src:url('fontes/actionj.ttf') format('truetype'), url('fontes/AARDC___.ttf') format('truetype');
+            /*
+            Tipos de format():
+                -opentype(pra fontes do tipo .otf)
+                -truetype(pra fontes do tipo .ttf)
+                -embedded-opentype
+                -truetype-aat (apple advanced typography)
+            */
+        } /* Pra adicionar fontes que estão fora da internet ou que não estão instaladas em nosso 
+        computador, precisamos adicionar esse caracter especial*/
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+        h1 {
+            font-family: 'Nome_da_Fonte';
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias 
+        similique provident itaque, architecto distinctio dolores eveniet in harum
+        quas fugiat illo, ad neque commodi quam totam. Quis similique ea molestias.</p>
+    
+    <h2>Subtitulo</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque eaque 
+        molestiae voluptates doloribus dignissimos numquam voluptatibus dolore sunt 
+        repellendus excepturi reiciendis totam fugit explicabo assumenda laboriosam, 
+        saepe maxime? Ea, alias.
+    </p>
+</body>
+</html>

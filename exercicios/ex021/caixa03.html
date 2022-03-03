@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda Personalizada</title>
+    <style>
+        h1 {
+            border: 20px solid black; /*ShortHand para borda, para a cor podia também colocar transparent*/
+            padding: 10px;
+            border-image-source: url('borda.png'); /*Joga a imagem nos quatro cantos da borda*/
+            border-image-slice: 37; /*Esse comando fatia a imagem na borda*/
+            border-image-repeat: repeat;/*Vai repetir a imagem dentro da borda*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda</h1>
+</body>
+</html>

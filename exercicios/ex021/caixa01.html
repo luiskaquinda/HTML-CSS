@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        h1 {  /*Box-Level*/
+
+            /*Tamanho da Caixa*/
+            height: 200px;
+            width: 200px;
+
+            /*Propriedades Anatómicas da Caixa*/
+            border-width: 10px;
+            border-style: solid; /*Faz com que a borda apareça. No nosso caso a borda é da cor castanha
+            (border-color: rgb(139, 82, 6))*/
+            border-color: rgb(139, 82, 6);
+
+            /*Podemos simplificar tudo isso usando o shorthands
+              Ficaria:
+                border: 10px solid rgb(139, 82, 6);
+                exatamente nesta ordem: a largura, estilo e a cor.
+            */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            margin:auto; /*Coloca  a minha caixa (no caso a box-model h1) centralizando, 
+            independente do navegador e da posição do navegador*/
+            
+            /*Podemos também simplificar tudo isso usando o shorthands
+              Ficaria:
+                padding: 10px 10px 10px 10px;
+                exatamente nesta ordem: cima, direita, baixo, esquerda.
+                Tal como o ponteiro do relogio gira!
+                OBS... Como todas as dimensões do meu padding são iguais, podemos colocar todas elas
+                apenas num padding informando apenas uma medida, assim:
+                padding: 10px;
+                ; 
+            */
+            
+            
+            outline-width: 10px;
+            outline-color: cadetblue;
+            outline-style: dashed; /*MOstra e coloca a linha de fora da minha caixa tracejado*/
+            /*Posso mudar as caracteristicas de um elemento. Transformando assim 
+            os meus boxs em inline ou block, com a propriedade display
+                Ficaria:
+                display: block; 
+                    ou
+                display: inline;
+            */
+        }
+
+        a { /*Inline-Level*/
+            border-width: 10px;
+            border-style: solid;
+            border-color: brown;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Paragrafos também são exemplos de caixa box-level, <a href="#">mas os links são exemplos de 
+        caixas inline-level
+    </a> Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
